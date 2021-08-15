@@ -2,15 +2,13 @@ import '@config/environments.config';
 
 import { logger } from '@shared/logger';
 import router from './router';
+import koaLogger from 'koa-logger';
 
 import Koa from 'koa';
 
 const app = new Koa();
 
-app.use(async (ctx, next) => {
-  logger.info(`${ctx.request.method} ${ctx.request.url} ${new Date()}`);
-  await next();
-})
+app.use(koaLogger());
 
 app.use(router.routes());
 
