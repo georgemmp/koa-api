@@ -33,6 +33,8 @@
     "koa-logger": "^3.2.1",
     "koa-parser": "^1.0.8",
     "koa-router": "^10.0.0",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5",
     "winston": "^3.3.3"
   }
 }
